@@ -1,0 +1,12 @@
+services:
+  database:
+    image: postgres:16.2
+    ports:
+      - 5432:5432
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./pg-data:/var/lib/postgres/sql/data
+    environment:
+      POSTGRES_DB: zoodb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret
