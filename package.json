@@ -2,10 +2,12 @@
   "name": "zoo-backend",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/index.ts",
+    "build": "bun build src/index.ts --target node --outdir dist"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.8",
+    "bun": "^1.2.2",
     "dotenv": "^16.4.7",
     "hono": "^4.7.1",
     "pg": "^8.13.3",
